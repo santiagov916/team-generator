@@ -1,20 +1,19 @@
 const inquirer = require('inquirer');
 
-const broadQuestions = [
+const questions = [
     {
-        type: 'choices',
-        name: 'role',
-        message: 'Please select a position:' ["Manager", "Engineer", "]
-    }
-];
+        type: 'list',
+        name: 'position',
+        message: 'Select a position:',
+        choices: ["Manager", "Engineer", "Intern"]
+    },
+]
 
-const managerQs = [
-    {
+function init() {
+    inquirer.prompt(questions) 
+    .then(data => {
+        console.log(data);
+    })
+}
 
-    }
-];
-
-inquirer.prompt(broadQuestions)
-.then(questionData => {
-    console.log(questionData);
-})
+init();
