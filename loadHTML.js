@@ -4,15 +4,15 @@ const inquirer = require('inquirer');
 function managerCard(data) {
     var html = ""
     for(var entry of data) {
-        html += `<div class="card m-card">
+        html += `<div class="card m-card col-3">
         <div class="card-body bg-primary text-white">
-            <h4 class="font-weight-bold"> ${entry.getName} </h4>
+            <h4 class="font-weight-bold"> ${entry.getName()} </h4>
             <p class="card-text">Manager</p>
         </div>
         <ul class="list-group list-group-flush">
             <li class="list-group-item id">ID: ${entry.getId()} </li>
             <li class="list-group-item email">Email: ${entry.getEmail()}</li>
-            <li class="list-group-item number">Office Number: ${entry.getNumber()}</li>
+            <li class="list-group-item number">Office Number: ${entry.getOfficeNumber()}</li>
         </ul>
     </div>`
     }
@@ -23,7 +23,7 @@ function managerCard(data) {
 function engineerCard(data) {
     var html = ""
     for(var entry of data) {
-        html += `<div class="card m-card">
+        html += `<div class="card m-card col-3">
         <div class="card-body bg-primary text-white">
             <h4 class="font-weight-bold"> ${entry.getName()} </h4>
             <p class="card-text">Engineer</p>
@@ -31,7 +31,7 @@ function engineerCard(data) {
         <ul class="list-group list-group-flush">
             <li class="list-group-item id">ID: ${entry.getId()} </li>
             <li class="list-group-item email">Email: ${entry.getEmail()}</li>
-            <li class="list-group-item number">Office Number: ${entry.getNumber()}</li>
+            <li class="list-group-item number">Github: ${entry.getGithub()}</li>
         </ul>
     </div>`
     }
@@ -42,7 +42,7 @@ function engineerCard(data) {
 function internCard(data) {
     var html = ""
     for(var entry of data) {
-        html += `<div class="card m-card">
+        html += `<div class="card m-card col-3">
         <div class="card-body bg-primary text-white">
             <h4 class="font-weight-bold"> ${entry.getName()}</h4>
             <p class="card-text">Intern</p>
@@ -50,10 +50,11 @@ function internCard(data) {
         <ul class="list-group list-group-flush">
             <li class="list-group-item id">ID: ${entry.getId()}</li>
             <li class="list-group-item email">Email: ${entry.getEmail()}</li>
-            <li class="list-group-item number">Office Number: ${entry.getNumber()}</li>
+            <li class="list-group-item number">School: ${entry.getSchool()}</li>
         </ul>
     </div>`
     }
+    return html;
 }
 
 // this function will put all the above data together and generate a page template for the user to see
@@ -91,11 +92,15 @@ function loadTeam(data) {
 
         </header>
     
-        <div class="container d-flex justify-content-between bg-white">
-
+        <div class="container d-flex justify-content-between bg-white col-12">
+            
+            <div class="row col-12">
+            
             ${managerCard(managers)}
             ${engineerCard(engineers)}
             ${internCard(interns)}
+
+            </div>
     
         </div>
     </body>

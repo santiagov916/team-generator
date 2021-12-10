@@ -27,7 +27,7 @@ const questions = [
     {
         type: 'email',
         name: 'email',
-        message: 'What is the your email?'
+        message: 'What is your email?'
     },
         //prompt questions specific to the role chosen
     {   when: (data) => data.role === "Manager",
@@ -48,6 +48,12 @@ const questions = [
         message: 'What University or school do you represent?'
     }
 ];
+
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (err) => err? console.log(err) : console.log("Your team's page is now available!"))
+}
+
+
         // function init is the main function for this program
 function init() {
 

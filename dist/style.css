@@ -7,3 +7,7 @@
 body {
     font-family: 'Raleway';
 }
+
+.card {
+    width: 18rem;
+}
