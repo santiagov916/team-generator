@@ -21,7 +21,7 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'employeeID',
+        name: 'id',
         message: 'What is your employee ID?'
     },
     {

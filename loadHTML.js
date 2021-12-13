@@ -4,15 +4,17 @@ const inquirer = require('inquirer');
 function managerCard(data) {
     var html = ""
     for(var entry of data) {
-        html += `<div class="card m-card col-3">
-        <div class="card-body bg-primary text-white">
-            <h4 class="font-weight-bold"> ${entry.getName()} </h4>
-            <p class="card-text">Manager</p>
+        html +=             `<div class="card m-4 pb-2" style="width: 18rem;">
+        <div class=" bg-primary card-header text-white">
+        <h4 >${entry.getName()}</h4>
+        <h4 class=" bg-primary text-white"><i class="fas fa-mug-hot  "></i>  
+        ${entry.getRole()}</h4>
+        <p class="card-text"></p>
         </div>
         <ul class="list-group list-group-flush">
-            <li class="list-group-item id">ID: ${entry.getId()} </li>
-            <li class="list-group-item email">Email: ${entry.getEmail()}</li>
-            <li class="list-group-item number">Office Number: ${entry.getOfficeNumber()}</li>
+        <li class="list-group-item  ID" >ID number: ${entry.getId()}</li>
+        <li class="list-group-item email" > Email:   <a href="mailto:${entry.getEmail()}">${entry.getEmail()}</a></li>
+        <li class="list-group-item " >Office number:  ${entry.getOfficeNumber()}</li>
         </ul>
     </div>`
     }
