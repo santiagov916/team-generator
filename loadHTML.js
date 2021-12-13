@@ -32,7 +32,7 @@ function engineerCard(data) {
         </div>
         <ul class="list-group list-group-flush">
             <li class="list-group-item id">ID: ${entry.getId()} </li>
-            <li class="list-group-item email">Email: ${entry.getEmail()}</li>
+            <li class="list-group-item email" > Email:   <a href="mailto:${entry.getEmail()}">${entry.getEmail()}</a></li>
             <li class="list-group-item number">Github: ${entry.getGithub()}</li>
         </ul>
     </div>`
@@ -51,7 +51,7 @@ function internCard(data) {
         </div>
         <ul class="list-group list-group-flush">
             <li class="list-group-item id">ID: ${entry.getId()}</li>
-            <li class="list-group-item email">Email: ${entry.getEmail()}</li>
+            <li class="list-group-item email" > Email:   <a href="mailto:${entry.getEmail()}">${entry.getEmail()}</a></li>
             <li class="list-group-item number">School: ${entry.getSchool()}</li>
         </ul>
     </div>`
