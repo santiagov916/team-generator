@@ -69,7 +69,7 @@ inquirer.prompt(questions)
         employeeInfo.push(newEmployeeData)
     }
     if (data.role == "Intern") {
-        const newEmployeeData = new Intern(data.name, data.id, data.email, data.github)
+        const newEmployeeData = new Intern(data.name, data.id, data.email, data.school)
         employeeInfo.push(newEmployeeData)
     }
     inquirer.prompt({

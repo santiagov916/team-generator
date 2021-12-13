@@ -4,8 +4,8 @@ const inquirer = require('inquirer');
 function managerCard(data) {
     var html = ""
     for(var entry of data) {
-        html +=             `<div class="card m-4 pb-2" style="width: 18rem;">
-        <div class=" bg-primary card-header text-white">
+        html +=             `<<div class="card m-card col-3">
+        <div class="card-body bg-primary text-white">
         <h4 >${entry.getName()}</h4>
         <h4 class=" bg-primary text-white"><i class="fas fa-mug-hot  "></i>  
         ${entry.getRole()}</h4>
