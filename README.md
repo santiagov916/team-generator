@@ -44,5 +44,5 @@
 
   ### Email the programmer: gme.santi24@yahoo.com
   ### Video of the program in action: https://watch.screencastify.com/v/2qYvMm19WJDGIbe92BB2
-  ### Screenshot of working code 
-  ![Working Code Image](assets/images/Screen Shot 2021-12-12 at 5.20.38 PM.png)
+  ### Screenshot of working code:
+  ![Working Code Image](assets/images/working-code.png)
