@@ -26,6 +26,7 @@ test("Can instantiate Employee instance", () => {
   test("Can get school via getSchool()", () => {
       const testValue = "school";
       const e = new Intern("Foo", 100, "test@tes.com", testValue);
+      expect(e.getSchool()).toBe(testValue);
   });
 
   
